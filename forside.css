@@ -90,98 +90,10 @@ body {
     border-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Color Adjuster Panel */
-.color-adjuster-panel {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    z-index: 100;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    padding: 1.5rem;
-    min-width: 320px;
-    max-width: 400px;
-    pointer-events: auto;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    display: none;
-}
-
-.color-adjuster-panel.open {
-    display: block;
-}
-
-.color-adjuster-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.color-adjuster-title {
-    color: white;
-    font-family: "Syne", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.color-adjuster-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0;
-    width: 24px;
-    height: 24px;
+h1{
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
-}
-
-.color-adjuster-close:hover {
-    opacity: 0.7;
-}
-
-.color-picker-group {
-    margin-bottom: 1.25rem;
-}
-
-.color-picker-label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.color-picker-wrapper {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.color-picker-input {
-    width: 60px;
-    height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    cursor: pointer;
-    background: none;
-    padding: 0;
-    -webkit-appearance: none;
-    appearance: none;
+    width: 100%;
 }
 
 .color-picker-input::-webkit-color-swatch-wrapper {
