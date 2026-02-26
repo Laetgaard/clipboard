@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Vision Board</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="clipboard.css">
+</head>
+<body>
+<h1>Interactive Vision Board</h1>
+
+<!-- Theme Selector -->
+<div id="theme-controls">
+    <label for="theme-selector">Theme Color:</label>
+    <select id="theme-selector" onchange="changeTheme()">
+        <option value="#f4f4f9">Light</option>
+        <option value="#333333">Dark</option>
+        <option value="#87CEEB">Blue</option>
+        <option value="#3CB371">Green</option>
+        <option value="#ffcccb">Pink</option>
+        <option value="#f9e79f">Yellow</option>
+        <option value="#fad7a0">Orange</option>
+        <option value="#d2b4de">Purple</option>
+        <option value="#aab7b8">Gray</option>
+    </select>
+</div>
+
+<!-- Canvas -->
+<div id="canvas-container">
+    <canvas id="vision-board" width="800" height="600"></canvas>
+</div>
+
+<!-- Controls -->
+<div id="controls">
+    <input type="file" id="file-input" accept="image/*" multiple>
+    <label for="canvas-width">Width:</label>
+    <input type="number" id="canvas-width" value="800" onchange="resizeCanvas()">
+    <label for="canvas-height">Height:</label>
+    <input type="number" id="canvas-height" value="600" onchange="resizeCanvas()">
+    <button onclick="saveCanvas()">Save Vision Board</button>
+</div>
+
+<!-- JavaScript -->
+<script src="clipboard.js"></script>
+</body>
+</html>

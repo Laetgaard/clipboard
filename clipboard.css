@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: 'Cinzel Decorative', serif;
+    background-color: var(--bg-color, #f4f4f9);
+    color: var(--text-color, #333);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    color: var(--heading-color, #6B4226);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--canvas-bg, #ffffff);
+    border: 2px solid var(--border-color, #ccc);
+    max-width: 90%;
+    position: relative;
+}
+
+canvas {
+    border: 1px solid var(--border-color, #aaa);
+    cursor: grab;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+input[type="file"], input[type="number"], select {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--button-bg, #6B4226);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg, #4A3022);
+}
+
+/* Selected Image Highlight */
+.selected {
+    animation: blink-border 1s step-end infinite;
+}
+
+@keyframes blink-border {
+    50% {
+        border: 2px dashed transparent;
+    }
+}
+
