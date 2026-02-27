@@ -610,7 +610,6 @@ class App {
         this.tick();
 
         window.addEventListener("resize", () => this.onResize());
-        window.addEventListener("mousemove", (ev) => this.onMouseMove(ev));
         window.addEventListener("touchmove", (ev) => this.onTouchMove(ev));
 
         // Handle visibility changes to prevent throttling
@@ -626,11 +625,9 @@ class App {
             this.render();
             window.removeEventListener("click", wakeUpAnimation);
             window.removeEventListener("touchstart", wakeUpAnimation);
-            window.removeEventListener("mousemove", wakeUpAnimation);
         };
         window.addEventListener("click", wakeUpAnimation, { once: true });
         window.addEventListener("touchstart", wakeUpAnimation, { once: true });
-        window.addEventListener("mousemove", wakeUpAnimation, { once: true });
     }
 
     getViewSize() {
@@ -693,10 +690,3 @@ function checkPulse() {
         pulseFrame = requestAnimationFrame(checkPulse);
     }
 }
-document.addEventListener("mousemove", () => {
-    lastMouseMoveTime = Date.now();
-    cursor.style.borderWidth = "2.5px";
-    if (!pulseFrame) {
-        pulseFrame = requestAnimationFrame(checkPulse);
-    }
-});
