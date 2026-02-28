@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Vision Board</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="clipboard.css">
 </head>
@@ -36,11 +36,11 @@
 <!-- Controls -->
 <div id="controls">
     <input type="file" id="file-input" accept="image/*" multiple>
-    <label for="canvas-width">Width:</label>
+    <label class="titles" for="canvas-width">Width:</label>
     <input type="number" id="canvas-width" value="800" onchange="resizeCanvas()">
-    <label for="canvas-height">Height:</label>
+    <label class="titles" for="canvas-height">Height:</label>
     <input type="number" id="canvas-height" value="600" onchange="resizeCanvas()">
-    <button onclick="saveCanvas()">Save Vision Board</button>
+    <button class="saveknap" onclick="saveCanvas()">Save Vision Board</button>
 </div>
 
 <!-- JavaScript -->

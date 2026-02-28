@@ -1,20 +1,22 @@
 /* General Styles */
 body {
-    font-family: 'Cinzel Decorative', serif;
-    background-color: var(--bg-color, #f4f4f9);
-    color: var(--text-color, #333);
+    background-color: #7F95D1;
     margin: 0;
     padding: 20px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 h1 {
-    color: var(--heading-color, #6B4226);
+    color: #ffffff;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
+.selector1{
+    color: #0114FF;
+}
 #canvas-container {
     display: flex;
     justify-content: center;
@@ -28,10 +30,14 @@ h1 {
 }
 
 canvas {
-    border: 1px solid var(--border-color, #aaa);
     cursor: grab;
 }
 
+.titles{
+    font-size: 20px;
+    font-weight: bold;
+
+}
 #controls {
     margin-top: 20px;
 }
@@ -40,8 +46,35 @@ input[type="file"], input[type="number"], select {
     padding: 10px;
     margin: 5px;
     font-size: 16px;
-    border: 1px solid #aaa;
+    color: #000000;
     border-radius: 5px;
+}
+
+input#file-input{
+    background-color: #666dfd;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: #366c9c 1px 1px 2px;
+}
+
+input#file-input:hover {
+    background-color: #4a4ed9;
+}
+
+.saveknap{
+    background-color: #666dfd;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: #366c9c 2px 3px 2px;
+}
+.saveknap:hover {
+    background-color: #4a4ed9;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 button {
@@ -50,7 +83,6 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-family: 'Cinzel Decorative', serif;
     font-size: 16px;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -60,6 +92,9 @@ button:hover {
     background-color: var(--button-hover-bg, #4A3022);
 }
 
+label{
+    color: #ffffff;
+}
 /* Selected Image Highlight */
 .selected {
     animation: blink-border 1s step-end infinite;
